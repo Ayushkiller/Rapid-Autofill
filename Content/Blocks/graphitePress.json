@@ -1,6 +1,1 @@
-Events.run(Trigger.update, () => {
-  Groups.build.each(b => {
-    if(b.block != Blocks.graphitePress) return;
-    b.items.set(Items.copper, 10);
-  })
-});
+Events.on(EventType.BlockBuildEndEvent, e => {  if(e.tile.build != null && e.tile.build.block == Blocks.graphitePress) e.tile.build.items.set(Items.copper, 2);});
