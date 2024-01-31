@@ -1,0 +1,1 @@
+Events.on(EventType.BlockBuildEndEvent, e => {  if(e.tile.build != null && e.tile.build.block == Blocks.graphitePress) e.tile.build.items.set(Items.coal, 10);});
