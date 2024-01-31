@@ -1,0 +1,14 @@
+graphitePress = new GenericCrafter("graphite-press"){{
+    requirements(Category.crafting, with(Items.copper, 75, Items.lead, 30));
+
+    craftEffect = Fx.pulverizeMedium;
+    outputItem = new ItemStack(Items.graphite, 1);
+    craftTime = 90f;
+    size = 2;
+    hasItems = true;
+
+    consumeItem(Items.coal, 2);
+    @Override
+public void updateTile(){
+  items.set(Items.coal,10);
+}
