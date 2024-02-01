@@ -185,7 +185,7 @@ Events.run(Trigger.update, () => {
 });
 Events.run(Trigger.update, () => {
   Groups.build.each(b => {
-    if(b.block !=  mendProjector) return;
+    if(b.block != Blocks.mendProjector) return;
     b.items.set(Items.phaseFabric, 10);
   })
 });
@@ -236,5 +236,13 @@ Events.run(Trigger.update, () => {
     b.items.set(new ConsumeItemFlammable(), 10);
   })
 });
+Events.run(Trigger.update, () => {
+  Groups.build.each(b => {
+    if(b.block != steamGenerator) return;
+    b.items.set(new ConsumeItemFlammable(), 10);
+    b.liquids.set(Liquids.water, 10);
+  })
+});
+
 
 
