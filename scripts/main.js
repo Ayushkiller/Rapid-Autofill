@@ -183,5 +183,58 @@ Events.run(Trigger.update, () => {
     b.liquids.set(Liquids.ozone, 10);
   })
 });
+Events.run(Trigger.update, () => {
+  Groups.build.each(b => {
+    if(b.block !=  mendProjector) return;
+    b.items.set(Items.phaseFabric, 10);
+  })
+});
+
+Events.run(Trigger.update, () => {
+  Groups.build.each(b => {
+    if(b.block !=  overdriveDome) return;
+    b.items.set(Items.phaseFabric, 10);
+    b.items.set(Items.silicon, 10);
+  })
+});
+Events.run(Trigger.update, () => {
+  Groups.build.each(b => {
+    if(b.block !=  forceProjector) return;
+    b.items.set(Items.phaseFabric, 10);
+    b.liquids.set(Liquids.cryofluid, 10);
+  })
+});
+Events.run(Trigger.update, () => {
+  Groups.build.each(b => {
+    if(b.block !=  buildTower) return;
+    b.liquids.set(Liquids.nitrogen, 10);
+  })
+});
+
+Events.run(Trigger.update, () => {
+  Groups.build.each(b => {
+    if(b.block != regenProjector) return;
+    b.liquids.set(Liquids.hydrogen, 10);
+    b.items.set(Items.phaseFabric, 10);
+  })
+});
+Events.run(Trigger.update, () => {
+  Groups.build.each(b => {
+    if(b.block != shockwaveTower) return;
+    b.liquids.set(Liquids.cynaogen, 10);
+  })
+});
+Events.run(Trigger.update, () => {
+  Groups.build.each(b => {
+    if(b.block != reinforcedPump) return;
+    b.liquids.set(Liquids.hydrogen, 10);
+  })
+});
+Events.run(Trigger.update, () => {
+  Groups.build.each(b => {
+    if(b.block != combustionGenerator) return;
+    b.items.set(new ConsumeItemFlammable(), 10);
+  })
+});
 
 
