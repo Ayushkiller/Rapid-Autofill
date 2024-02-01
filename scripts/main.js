@@ -256,7 +256,55 @@ Events.run(Trigger.update, () => {
     b.liquids.set(Liquids.cryofluid, 10);
   })
 });
-
+Events.run(Trigger.update, () => {
+  Groups.build.each(b => {
+    if(b.block != Blocks.rtgGenerator) return;
+    b.items.set(Items.phaseFabric, 10);
+    b.items.set(Items.thorium, 10);
+  })
+});
+Events.run(Trigger.update, () => {
+  Groups.build.each(b => {
+    if(b.block != Blocks.thoriumReactor) return;
+    b.items.set(Items.thorium, 10);
+    b.liquids.set(Liquids.cryofluid, 10);
+  })
+});
+Events.run(Trigger.update, () => {
+  Groups.build.each(b => {
+    if(b.block != Blocks.impactReactor) return;
+    b.items.set(Items.blastCompound, 10);
+    b.liquids.set(Liquids.cryofluid, 10);
+  })
+});
+Events.run(Trigger.update, () => {
+  Groups.build.each(b => {
+    if(b.block != Blocks.chemicalCombustionChamber) return;
+    b.liquids.set(Liquids.ozone, 10);
+    b.liquids.set(Liquids.arkycite, 10);
+  })
+});
+Events.run(Trigger.update, () => {
+  Groups.build.each(b => {
+    if(b.block != Blocks.pyrolysisGenerator) return;
+    b.liquids.set(Liquids.slag, 10);
+    b.liquids.set(Liquids.arkycite, 10);
+  })
+});
+Events.run(Trigger.update, () => {
+  Groups.build.each(b => {
+    if(b.block != Blocks.fluxReactor) return;
+    b.liquids.set(Liquids.cynaogen, 10);
+  })
+});
+Events.run(Trigger.update, () => {
+  Groups.build.each(b => {
+    if(b.block != Blocks.neoplasiaReactor) return;
+    b.liquids.set(Liquids.arkycite, 10);
+    b.liquids.set(Liquids.water, 10);
+    b.items.set(Items.phaseFabric, 10);
+  })
+});
 
 
 
