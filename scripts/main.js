@@ -221,7 +221,7 @@ Events.run(Trigger.update, () => {
 Events.run(Trigger.update, () => {
   Groups.build.each(b => {
     if(b.block != Blocks.shockwaveTower) return;
-    b.liquids.set(Liquids.cynaogen, 10);
+    b.liquids.set(Liquids.cyanogen, 10);
   })
 });
 Events.run(Trigger.update, () => {
@@ -294,7 +294,7 @@ Events.run(Trigger.update, () => {
 Events.run(Trigger.update, () => {
   Groups.build.each(b => {
     if(b.block != Blocks.fluxReactor) return;
-    b.liquids.set(Liquids.cynaogen, 10);
+    b.liquids.set(Liquids.cyanogen 10);
   })
 });
 Events.run(Trigger.update, () => {
