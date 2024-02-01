@@ -244,11 +244,19 @@ Events.run(Trigger.update, () => {
     if(b.block != Blocks.steamGenerator) return;
     b.items.set(Items.blastCompound, 10);
     b.items.set(Items.coal, 10);
-    b.items.set(Items.blast, 10);
+    b.items.set(Items.blastCompound, 10);
     b.items.set(Items.pyratite, 10);
     b.liquids.set(Liquids.water, 10);
   })
 });
+Events.run(Trigger.update, () => {
+  Groups.build.each(b => {
+    if(b.block != Blocks.differentialGenerator) return;
+    b.items.set(Items.pyratite, 10);
+    b.liquids.set(Liquids.cryofluid, 10);
+  })
+});
+
 
 
 
