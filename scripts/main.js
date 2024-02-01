@@ -235,14 +235,14 @@ Events.run(Trigger.update, () => {
     if(b.block != Blocks.combustionGenerator) return;
     b.items.set(Items.blastCompound, 10);
     b.items.set(Items.coal, 10);
-    b.items.set(Items.blast, 10);
+    b.items.set(Items.sporePod, 10);
     b.items.set(Items.pyratite, 10);
   })
 });
 Events.run(Trigger.update, () => {
   Groups.build.each(b => {
     if(b.block != Blocks.steamGenerator) return;
-    b.items.set(Items.blastCompound, 10);
+    b.items.set(Items.sporePod, 10);
     b.items.set(Items.coal, 10);
     b.items.set(Items.blastCompound, 10);
     b.items.set(Items.pyratite, 10);
